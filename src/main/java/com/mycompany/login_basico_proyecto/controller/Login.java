@@ -9,6 +9,7 @@ import javax.enterprise.context.SessionScoped;
 import java.io.Serializable;
 import javax.faces.application.FacesMessage;
 import javax.faces.context.FacesContext;
+import javax.servlet.http.HttpSession;
 
 @Named(value = "login")
 @SessionScoped
@@ -38,7 +39,9 @@ public class Login implements Serializable {
 
     public String iniciarSesion() {
         if (usuario.equals("admin") && contrasenna.equals("clave123")) {
-            return "inicio";
+            HttpSession sesion = (HttpSession)FacesContext.getCurrentInstance().getExternalContext().getSession(true);
+            sesion.setAttribute("usuario",usuario);
+            return "inicio.xhtml?faces-redirect=true";
         } else {
             FacesContext contexto = FacesContext.getCurrentInstance();
             FacesMessage fm = new FacesMessage(FacesMessage.SEVERITY_ERROR,"Usuario y/o contraseña incorrectos","Intente nuevamente");
