@@ -1,0 +1,36 @@
+/* Estilos específicos para el index de Fundaciones */
+
+#t-all {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+#t-all th {
+    background-color: #F9A825;
+    color: white;
+    padding: 12px;
+}
+
+#t-all td {
+    padding: 10px;
+}
+
+tr:hover {
+    background-color: #FFF9C4;
+}
+
+/* También puedes agregar botones o colores únicos */
+.btn-fundacion {
+    background-color: #81D4FA;
+    color: #5D4037;
+    padding: 8px 16px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.btn-fundacion:hover {
+    background-color: #4FC3F7;
+}

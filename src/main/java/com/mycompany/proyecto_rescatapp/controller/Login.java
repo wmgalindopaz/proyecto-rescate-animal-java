@@ -57,7 +57,7 @@ public class Login implements Serializable {
         if (user.getIdUsuario()!=null) {
             HttpSession sesion = (HttpSession)FacesContext.getCurrentInstance().getExternalContext().getSession(true);
             sesion.setAttribute("usuario",usuario);
-            return "inicio.xhtml?faces-redirect=true";
+            return "/view/index.xhtml?faces-redirect=true";
         } else {
             FacesContext contexto = FacesContext.getCurrentInstance();
             FacesMessage fm = new FacesMessage(FacesMessage.SEVERITY_ERROR,"Usuario y/o contraseña incorrectos","Intente nuevamente");
@@ -65,6 +65,12 @@ public class Login implements Serializable {
             return null;
         }
     }
+    
+     public String cerrarSesion (){
+         FacesContext.getCurrentInstance().getExternalContext().invalidateSession();
+         return "/login.xhtml?faces-redirect=true";
+                 
+     }
     
     public Login(){  
     }

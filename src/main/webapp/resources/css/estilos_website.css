@@ -1,0 +1,138 @@
+/* Hoja de estilo para Rescatapp */
+/* Paleta cálida y amigable */
+
+body {
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+    background-color: #F5F5F5; /* Gris claro de fondo */
+    margin: 0;
+    padding: 0;
+    color: #5D4037; /* Marrón claro para texto */
+}
+
+#top {
+    background-color: #81D4FA; /* Azul suave */
+    color: #5D4037;
+    padding: 20px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 3px solid #F9A825;
+}
+
+#top h1 {
+    margin: 0;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+#top h2 {
+    margin: 0;
+    font-size: 16px;
+}
+
+#left {
+    width: 220px;
+    background-color: #FFCC80; /* Naranja suave */
+    padding: 20px;
+    float: left;
+    height: calc(100vh - 140px);
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.05);
+}
+
+#left a {
+    display: block;
+    color: #5D4037;
+    text-decoration: none;
+    margin: 12px 0;
+    padding: 10px 14px;
+    background-color: #FFF8E1;
+    border-radius: 6px;
+    transition: background 0.3s;
+    font-weight: 500;
+}
+
+#left a:hover {
+    background-color: #FFE082;
+}
+
+.left_content {
+    margin-left: 240px;
+    padding: 30px;
+    background-color: white;
+    min-height: 600px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.03);
+}
+
+#bottom {
+    clear: both;
+    background-color: #81D4FA;
+    color: #5D4037;
+    text-align: center;
+    padding: 15px 0;
+    border-top: 2px solid #F9A825;
+    font-weight: bold;
+}
+
+h:form > input[type="submit"],
+input[type="submit"],
+button,
+h\\:commandButton {
+    background-color: #F9A825; /* Amarillo cálido */
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    font-size: 14px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+h:form > input[type="submit"]:hover,
+input[type="submit"]:hover,
+button:hover {
+    background-color: #F57F17;
+}
+
+/* Confirmación verde esperanza */
+.success-message {
+    color: #2E7D32;
+    background-color: #A5D6A7;
+    padding: 10px;
+    border-radius: 6px;
+    margin: 10px 0;
+}
+
+/* Estilo para tablas DataTables */
+table.jsf-data-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+table.jsf-data-table th,
+table.jsf-data-table td {
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+
+table.jsf-data-table th {
+    background-color: #FFF8E1;
+    color: #5D4037;
+    font-weight: bold;
+}
+
+/* Estilos para formularios */
+input[type="text"],
+input[type="password"],
+textarea,
+select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-sizing: border-box;
+}
