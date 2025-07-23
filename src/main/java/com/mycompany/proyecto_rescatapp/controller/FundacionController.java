@@ -7,10 +7,10 @@ package com.mycompany.proyecto_rescatapp.controller;
 import com.mycompany.proyecto_rescatapp.entities.Fundaciones;
 import com.mycompany.proyecto_rescatapp.services.FundacionesFacadeLocal;
 import javax.inject.Named;
-import javax.faces.view.ViewScoped;
 import java.io.Serializable;
 import java.util.List;
 import javax.ejb.EJB;
+import javax.enterprise.context.SessionScoped;
 import javax.faces.application.FacesMessage;
 import javax.faces.context.FacesContext;
 
@@ -19,7 +19,7 @@ import javax.faces.context.FacesContext;
  * @author NITRO
  */
 @Named(value = "fundacionController")
-@ViewScoped
+@SessionScoped
 public class FundacionController implements Serializable {
     
     private Fundaciones con = new Fundaciones();
@@ -58,4 +58,30 @@ public class FundacionController implements Serializable {
             contexto.addMessage(null, fm); 
         }
     } 
+    
+    public String editarFundacionP1(Fundaciones con2){
+        this.con = con2;
+        return "/view/fundations/createupdate.xhtml";
+    }
+    
+    public void editarFundacionP2(){
+        try {
+            this.ffl.edit(con);
+            FacesContext contexto = FacesContext.getCurrentInstance();
+            FacesMessage fm = new FacesMessage(FacesMessage.SEVERITY_INFO,"Fundación Editada Correctamente","MSG_INFO");
+            contexto.addMessage(null, fm); 
+            
+        } catch (Exception e) {
+    }
+    
+    }
+    public void eliminarFundacion(Fundaciones con2) {
+        try {
+            this.ffl.remove(con2);
+            FacesContext contexto = FacesContext.getCurrentInstance();
+            FacesMessage fm = new FacesMessage(FacesMessage.SEVERITY_INFO,"Fundación Eliminada","MSG_INFO");
+            contexto.addMessage(null, fm); 
+        }catch (Exception e) {
+    }
+}
 }
