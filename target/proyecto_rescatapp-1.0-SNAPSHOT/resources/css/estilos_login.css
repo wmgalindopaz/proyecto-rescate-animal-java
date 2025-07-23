@@ -1,0 +1,93 @@
+body {
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+    background-color: #F5F5F5;
+    margin: 0;
+    padding: 0;
+}
+
+h2 {
+    text-align: center;
+    color: #5D4037;
+    margin-top: 10px;
+    margin-bottom: 25px;
+}
+
+.formulario-login {
+    background-color: #FFFFFF;
+    max-width: 500px;
+    margin: 60px auto;
+    padding: 40px 30px;
+    border-radius: 12px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+    border-top: 6px solid #F9A825;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.logo-container {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.logo-container img {
+    width: 220px;
+    height: auto;
+
+}
+
+.campos-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.campos-container label,
+h\:outputLabel {
+    color: #5D4037;
+    font-weight: bold;
+    text-align: left;
+    width: 100%;
+    max-width: 300px;
+    margin-bottom: 4px;
+}
+
+.campos-container input[type="text"],
+.campos-container input[type="password"],
+.campos-container h\:inputText,
+.campos-container h\:inputSecret {
+    width: 100%;
+    max-width: 300px;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.miBotón {
+    background-color: #F9A825;
+    color: white;
+    border: none;
+    width: 100%;
+    max-width: 300px;
+    padding: 12px;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.miBotón:hover {
+    background-color: #c17900;
+}
+
+.error-msg {
+    color: red;
+    font-size: 0.9em;
+    width: 100%;
+    max-width: 300px;
+    text-align: left;
+}
