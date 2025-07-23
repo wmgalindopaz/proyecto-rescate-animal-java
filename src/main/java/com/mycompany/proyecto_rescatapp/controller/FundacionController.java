@@ -11,6 +11,9 @@ import java.io.Serializable;
 import java.util.List;
 import javax.ejb.EJB;
 import javax.enterprise.context.SessionScoped;
+import java.io.Serializable;
+import java.util.List;
+import javax.ejb.EJB;
 import javax.faces.application.FacesMessage;
 import javax.faces.context.FacesContext;
 
@@ -57,8 +60,7 @@ public class FundacionController implements Serializable {
             FacesMessage fm = new FacesMessage(FacesMessage.SEVERITY_INFO,"Fundación Registrada","MSG_INFO");
             contexto.addMessage(null, fm); 
         }
-    } 
-    
+    }    
     public String editarFundacionP1(Fundaciones con2){
         this.con = con2;
         return "/view/fundations/createupdate.xhtml";
