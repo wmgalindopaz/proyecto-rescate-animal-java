@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <body>
+
+        <ui:composition template="./../websiteTemplate.xhtml">
+
+            <ui:define name="content">
+                <f:view>
+
+
+                    <h:form>
+                        <h1><h:outputText value="Create/Edit"/></h1>
+                        <h:panelGrid columns="2">
+                            <h:outputLabel value="IdFundacion:" for="idFundacion" />
+                            <h:inputText id="idFundacion" value="#{fundacionController.con.idFundacion}" title="IdFundacion" required="true" requiredMessage="The IdFundacion field is required."/>
+                            <h:outputLabel value="Nombre:" for="nombre" />
+                            <h:inputText id="nombre" value="#{fundacionController.con.nombre}" title="Nombre" required="true" requiredMessage="The Nombre field is required."/>
+                            <h:outputLabel value="Direccion:" for="direccion" />
+                            <h:inputText id="direccion" value="#{fundacionController.con.direccion}" title="Direccion" required="true" requiredMessage="The Direccion field is required."/>
+                            <h:outputLabel value="Telefono:" for="telefono" />
+                            <h:inputText id="telefono" value="#{fundacionController.con.telefono}" title="Telefono" />
+                            <h:outputLabel value="Email:" for="email" />
+                            <h:inputText id="email" value="#{fundacionController.con.email}" title="Email" />
+                        </h:panelGrid>
+                        <h:commandButton value="Insertar" action="#{fundacionController.crearP2()}"/>
+                    </h:form>
+                </f:view>
+
+            </ui:define>
+
+        </ui:composition>
+
+    </body>
+</html>

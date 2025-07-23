@@ -11,6 +11,8 @@ import javax.faces.view.ViewScoped;
 import java.io.Serializable;
 import java.util.List;
 import javax.ejb.EJB;
+import javax.faces.application.FacesMessage;
+import javax.faces.context.FacesContext;
 
 /**
  *
@@ -37,5 +39,23 @@ public class FundacionController implements Serializable {
     }
     public FundacionController() {
     }
+    public String crearP1 () {
+        this.con = new Fundaciones();
+        return "/view/fundations/createupdate.xhtml";
+    }
     
+    public void crearP2 () {
+        
+        try{
+            this.ffl.create(con);
+            FacesContext contexto = FacesContext.getCurrentInstance();
+            FacesMessage fm = new FacesMessage(FacesMessage.SEVERITY_INFO,"Fundación Registrada","MSG_INFO");
+            contexto.addMessage(null, fm);  
+            this.con = new Fundaciones(); 
+        } catch (Exception e) {
+            FacesContext contexto = FacesContext.getCurrentInstance();
+            FacesMessage fm = new FacesMessage(FacesMessage.SEVERITY_INFO,"Fundación Registrada","MSG_INFO");
+            contexto.addMessage(null, fm); 
+        }
+    } 
 }
